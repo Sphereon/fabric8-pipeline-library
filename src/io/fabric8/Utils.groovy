@@ -335,6 +335,7 @@ def getBranch(){
 def isCI(){
   def branch = getBranch()
   if(branch && (branch.toLowerCase().startsWith('PR-') || branch.toLowerCase().startsWith('feature'))){
+      echo "CI branch ${branch} detected"
     return true
   }
   // if we can't get the branch assume we're not in a CI pipeline as that would be a PR branch
