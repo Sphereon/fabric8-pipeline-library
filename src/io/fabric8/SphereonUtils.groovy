@@ -1,12 +1,10 @@
 #!/usr/bin/groovy
 package com.sphereon.ci
 
-import io.fabric8.Utils
-
 def init() {
     Utils.metaClass.isCI = {
         ->
-        def branch = Utils.getBranch()
+        def branch = getBranch()
         if(branch && (branch.toLowerCase().startsWith('pr-') || branch.toLowerCase().startsWith('feature'))){
             echo "- CI branch detected: ${branch}"
             return true
