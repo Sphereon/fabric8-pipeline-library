@@ -1,7 +1,10 @@
 #!/usr/bin/groovy
 package io.fabric8
 
-Utils.metaClass.isCI = {
-    -> echo "WHOEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIIIIIIII"
-    return true
+def init() {
+    Utils.metaClass.isCI = {
+        ->
+        echo "WHOEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIIIIIIII"
+        return true
+    }
 }
