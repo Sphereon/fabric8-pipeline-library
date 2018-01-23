@@ -4,7 +4,7 @@ package io.fabric8
 def init() {
     Utils.metaClass.isCI = {
         ->
-        def branch = $deledate.getBranch()
+        def branch = $delegate.getBranch()
         if(branch && (branch.toLowerCase().startsWith('pr-') || branch.toLowerCase().startsWith('feature'))){
             echo "- CI branch detected: ${branch}"
             return true
