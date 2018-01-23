@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-package com.sphereon.ci
+package io.fabric8
 
 def init() {
     Utils.metaClass.isCI = {
