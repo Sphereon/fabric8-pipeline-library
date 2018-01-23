@@ -14,7 +14,7 @@ def call(body) {
 
     def flow = new io.fabric8.Fabric8Commands()
 
-    def dockerfileName = config.dockerfileName ?: 'Dockerfile'
+    def dockerfileName = config.dockerfileName ?: 'Dockerfile.back'
     def containerName = config.containerName ?: 'clients'
     def autoMerge = config.autoMerge ?: false
     def project = config.project

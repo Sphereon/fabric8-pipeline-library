@@ -10,7 +10,7 @@ def call(body) {
 
   def flow = new io.fabric8.Fabric8Commands()
 
-  def dockerfileLocation = config.parentDockerfileLocation ?: 'Dockerfile'
+  def dockerfileLocation = config.parentDockerfileLocation ?: 'Dockerfile.back'
   def containerName = config.containerName ?: 'clients'
   def autoMerge = config.autoMerge ?: false
 
@@ -54,7 +54,7 @@ def call(body) {
           sh "git config --global user.email fabric8-admin@googlegroups.com"
           sh "git config --global user.name fabric8-release"
 
-          def message = "Update Dockerfile base image tag ${config.propertyName} to ${config.version}"
+          def message = "Update Dockerfile.back base image tag ${config.propertyName} to ${config.version}"
           sh "git add ${dockerfileLocation}"
           sh "git commit -m \"${message}\""
           sh "git push origin updateDockerfileFromTag${uid}"

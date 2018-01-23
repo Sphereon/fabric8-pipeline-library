@@ -35,7 +35,7 @@ def call(body) {
             }
         }
 
-        if (fileExists('Dockerfile')){
+        if (fileExists('Dockerfile.back')){
             container(name: 'docker') {
                 def imageName = "docker.io/${dockerOrg}/${prj}"
 

@@ -63,9 +63,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:fabric8io/fabric8-pipeline-library.git</connection>
-    <developerConnection>scm:git:git@github.com:fabric8io/fabric8-pipeline-library.git</developerConnection>
-    <url>http://github.com/fabric8io/fabric8-pipeline-library</url>
+    <connection>scm:git:git@github.com:Sphereon/fabric8-pipeline-library.git</connection>
+    <developerConnection>scm:git:git@github.com:Sphereon/fabric8-pipeline-library.git</developerConnection>
+    <url>http://github.com/Sphereon/fabric8-pipeline-library</url>
     <tag>app-console-2.0.1</tag>
   </scm>
 
