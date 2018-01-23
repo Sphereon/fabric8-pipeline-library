@@ -6,7 +6,7 @@ import io.fabric8.Utils
 def init() {
     Utils.metaClass.isCI = {
         ->
-        def branch = getBranch()
+        def branch = Utils.getBranch()
         if(branch && (branch.toLowerCase().startsWith('pr-') || branch.toLowerCase().startsWith('feature'))){
             echo "- CI branch detected: ${branch}"
             return true
